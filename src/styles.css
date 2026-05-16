@@ -158,4 +158,8 @@ body {
   .contact-info .sep {
     display: none;
   }
+
+  body {
+    padding-bottom: 90px !important;
+  }
 }
