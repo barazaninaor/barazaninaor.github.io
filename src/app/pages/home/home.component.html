@@ -1,0 +1,20 @@
+<div
+  class="home-wrapper"
+  [attr.dir]="langService.lang() === 'he' ? 'rtl' : 'ltr'"
+>
+  <div class="profile-container">
+    <img src="images/naor.jpg" [alt]="t.title" class="profile-img" />
+  </div>
+
+  <h1 class="main-title">{{ t.title }}</h1>
+  <p class="subtitle">{{ t.subtitle }}</p>
+
+  <div class="button-group">
+    <a routerLink="/cv" class="btn btn-primary">
+      {{ t.cv_btn }}
+    </a>
+    <a routerLink="/cover-letter" class="btn btn-outline">
+      {{ t.cl_btn }}
+    </a>
+  </div>
+</div>

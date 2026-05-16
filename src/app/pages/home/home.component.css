@@ -1,0 +1,130 @@
+/* Container for the home content */
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  padding-top: 16vh; 
+  min-height: 85vh;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 1. FIXED IMAGE CONTAINER - This prevents jumping */
+.profile-container {
+  height: 250px; /* Space reserved for the image + margin */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid #0055ff;
+  box-shadow: 0 0 40px rgba(0, 85, 255, 0.6);
+  object-fit: cover;
+}
+
+/* 2. TITLE AREA - Fixed height to absorb text changes */
+.main-title {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin: 10px 0;
+  min-height: 1.2em; /* Reserves vertical space for the title line */
+  background: linear-gradient(to bottom, #ffffff, #b1b1b1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+}
+
+/* 3. SUBTITLE AREA - Fixed height container */
+.subtitle-container {
+  min-height: 80px; /* Reserves space so buttons don't jump when text wraps differently */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: #a1a1a1;
+  max-width: 850px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.button-group {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.btn {
+  padding: 16px 45px;
+  border-radius: 60px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-primary {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #333;
+}
+
+.btn-outline:hover {
+  border-color: #0055ff;
+  background-color: rgba(0, 85, 255, 0.1);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 85, 255, 0.4);
+}
+
+/* ==========================================================================
+   Mobile Responsive Adjustments (Screens smaller than 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Scales down the main name title smoothly on mobile screens */
+  .main-title { 
+    font-size: 3.2rem; 
+  }
+  
+  /* Adds specific scaling and breathing room for the long bio description */
+  .subtitle {
+    font-size: 1.1rem;      /* Adjusts text size to prevent heavy clamping on small screens */
+    padding: 0 15px;        /* Prevents the text from touching the edge of the mobile screen */
+    line-height: 1.5;       /* Improves overall reading line height flow */
+  }
+
+  /* Slightly compacts the profile avatar size for mobile viewport height */
+  .profile-img { 
+    width: 180px; 
+    height: 180px; 
+  }
+
+  /* Forces navigation action buttons to stack vertically instead of wrapping layout */
+  .button-group { 
+    flex-direction: column; 
+  }
+}

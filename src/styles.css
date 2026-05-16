@@ -1,1 +1,161 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+   Global Application Styles & Background Gradient
+   ========================================================================== */
+body {
+  background: radial-gradient(circle at center, #0a1128 0%, #000000 100%);
+  margin: 0;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ==========================================================================
+   Shared Page Layout & Wrapper (Enhanced High-Contrast Container)
+   ========================================================================== */
+.page-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  /* Darker elevated background for better contrast against the radial body background */
+  background-color: #111827; 
+  /* Crisp, structural border to define the page layout boundaries */
+  border: 1px solid #374151; 
+  /* Sharp professional rounded corners matching the original site portfolio design */
+  border-radius: 8px; 
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  color: #f3f4f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Bi-directional Text Alignment (RTL/LTR) handling based on current language attribute */
+[dir="rtl"] .page-container {
+  text-align: right;
+}
+
+[dir="ltr"] .page-container {
+  text-align: left;
+}
+
+/* ==========================================================================
+   Centered Page Headers & Shared Hero Typos (CV Name & CL Title)
+   ========================================================================== */
+.cv-header, .cl-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* Main typography for top-level layout actions (e.g., Naor Barazani / My Journey into Software Development) */
+.main-page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+}
+
+/* Shared structural gray typo handling secondary descriptions below headers (Tagline / Greeting) */
+.tagline, .cl-greeting {
+  font-size: 18px;
+  font-weight: 500;
+  color: #94a3b8;
+  margin: 5px 0 0 0;
+}
+
+/* Adjustments specifically targeted for the CV profile tagline component */
+.tagline {
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   Typography & Accent Elements (Matching Original UI)
+   ========================================================================== */
+
+/* Inner section dividers featuring the original solid blue accent line indicator */
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  /* Solid blue brand accent line for separation */
+  border-bottom: 2px solid #2563eb; 
+}
+
+/* Global inline anchor links styling (e.g., dynamic project links inside bullets) */
+.cv-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease-in-out;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.cv-link:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Page Load Smooth Transition Effect
+   ========================================================================== */
+
+/* Triggers a smooth, global fade-in animation when the view initializes */
+.fade-in-page {
+  animation: fadeInPageKeyframe 1s ease-in-out forwards;
+}
+
+/* Defines the structural opacity shift from completely hidden to visible */
+@keyframes fadeInPageKeyframe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Hard Native Print & PDF Export Overrides
+   ========================================================================== */
+@media print {
+  /* Forces immediate rendering during document generation to prevent blank PDF pages */
+  .fade-in-page {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ==========================================================================
+   Mobile Responsive Adjustments (Screens smaller than 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  
+  /* 1. Reduce outer margins and internal padding to maximize screen real estate on mobile devices */
+  .page-container {
+    margin: 10px auto;
+    padding: 20px 15px;
+    border-radius: 0; /* Flattens corners for a seamless full-screen edge-to-edge look */
+  }
+
+  /* 2. Stack job/education headers vertically to prevent text overlapping or horizontal crushing */
+  .item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* 3. Reformat contact information info into a centered vertical list layout */
+  .contact-info {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  /* Hide the horizontal pipeline separators (|) as they are redundant in a vertical layout */
+  .contact-info .sep {
+    display: none;
+  }
+}

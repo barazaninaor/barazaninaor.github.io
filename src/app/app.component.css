@@ -1,0 +1,57 @@
+/* Container fixed to the top-left corner */
+.header {
+  position: absolute;
+  top: 25px;
+  left: 40px;   /* This anchors it to the left side */
+  z-index: 1000;
+}
+
+/* Wrapper for the two buttons - creates the dark 'pill' shape */
+.lang-switch {
+  display: flex;
+  direction: ltr !important; /* Forces the buttons to stay in the same order regardless of page language */
+  background-color: rgba(17, 17, 17, 0.8); /* Semi-transparent dark background */
+  padding: 4px;
+  backdrop-filter: blur(5px); /* Subtle blur effect for the background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Basic styling for the language buttons */
+.lang-btn {
+  background: transparent;
+  color: #888; /* Gray color for the inactive language */
+  border: none;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover effect for the inactive language */
+.lang-btn:hover:not(.active) {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Active language styling - includes blue background and glow effect */
+.lang-btn.active {
+  background-color: #0044ff;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 85, 255, 0.5);
+}
+
+/* RTL support - moves the header to the left side when language is Hebrew */
+:host-context([dir="rtl"]) .header {
+  right: auto;
+  left: 40px;
+}
+
+/* Small click animation */
+.lang-btn:active {
+  transform: scale(0.95);
+}

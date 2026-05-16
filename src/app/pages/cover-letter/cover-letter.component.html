@@ -1,0 +1,24 @@
+<div
+  class="page-container"
+  [attr.dir]="t().mainTitle === 'המסלול שלי לעולם הפיתוח' ? 'rtl' : 'ltr'"
+>
+  <div class="fade-in-page">
+    <header class="cl-header">
+      <h1 class="main-page-title">{{ t().mainTitle }}</h1>
+      <p class="cl-greeting">{{ t().greeting }}</p>
+    </header>
+
+    <article class="letter-body">
+      @for (paragraph of t().paragraphs; track paragraph) {
+        <p class="cl-paragraph">{{ paragraph }}</p>
+      }
+
+      <div class="cl-footer">
+        <p class="cl-closing">{{ t().closing }}</p>
+        <p class="cl-signature">
+          <strong>{{ t().signature }}</strong>
+        </p>
+      </div>
+    </article>
+  </div>
+</div>

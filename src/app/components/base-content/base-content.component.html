@@ -1,0 +1,29 @@
+<div
+  class="base-layout"
+  [attr.dir]="langService.lang() === 'he' ? 'rtl' : 'ltr'"
+>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a
+        routerLink="/home"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-home-link"
+      >
+        {{ langService.lang() === "he" ? "דף הבית" : "Home" }}
+      </a>
+
+      <a routerLink="/cv" routerLinkActive="active">
+        {{ langService.lang() === "he" ? "קורות חיים" : "CV" }}
+      </a>
+
+      <a routerLink="/cover-letter" routerLinkActive="active">
+        {{ langService.lang() === "he" ? "מכתב מקדים" : "Cover Letter" }}
+      </a>
+    </div>
+  </nav>
+
+  <main class="content-wrapper">
+    <router-outlet></router-outlet>
+  </main>
+</div>

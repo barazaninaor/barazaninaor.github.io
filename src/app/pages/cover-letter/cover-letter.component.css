@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Typography & Editorial Elements for the Letter Body
+   ========================================================================== */
+.letter-body {
+  margin-bottom: 40px;
+}
+
+.cl-paragraph {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+  text-align: justify; /* Provides a clean corporate layout alignment */
+}
+
+/* ==========================================================================
+   Structural Footer Alignments & Signature Layout
+   ========================================================================== */
+.cl-footer {
+  margin-top: 40px;
+  border-top: 1px solid #1e293b;
+  padding-top: 20px;
+  color: #94a3b8;
+}
+
+.cl-closing {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.cl-signature {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
