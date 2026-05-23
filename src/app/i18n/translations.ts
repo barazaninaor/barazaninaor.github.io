@@ -98,17 +98,22 @@ export const TRANSLATIONS = {
           date: "2025 - היום",
           bullets: [
             {
-              label: "הכשרה טכנולוגית (320 שעות)",
+              label: "הכשרה מעשית (320 שעות)",
               value: "פיתוח צד לקוח וצד שרת, עבודה עם בסיסי נתונים וארכיטקטורת מערכות."
             },
             {
-              label: "פרויקט גמר שלב א'",
-              value: "פיתוח אפליקציית 'Math Ninja' – משחק אינטראקטיבי לתרגול לוח הכפל המבוסס על לוגיקת צד-לקוח.",
+              label: "פרויקט 1 - Math Ninja",
+              value: "משחק אינטראקטיבי לתרגול לוח הכפל המבוסס על לוגיקת צד-לקוח.",
               link: { url: "https://math-ninja-production.up.railway.app/", text: "לצפייה בפרויקט Math Ninja" }
             },
             {
+              label: "פרויקט 2 - Deep Analysis",
+              value: "מערכת Web מבוססת React לניתוח וצפייה בנתונים של מניות, הכוללת ממשק משתמש אינטראקטיבי ומותאם אישית להצגת תובנות דאטה בצורה ויזואלית.",
+              link: { url: "https://barazaninaor.github.io/deep-analysis/#/", text: "לצפייה בפרויקט Deep Analysis" }
+            },
+            {
               label: "כלים וטכנולוגיות",
-              value: "ידע מעשי ב-JavaScript, Node.js, SQL וניהול גרסאות ב-Git."
+              value: "JavaScript, React, Angular, Node.js, Python, Java, SQL & NoSQL Databases, Firebase, Git."
             }
           ]
         },
@@ -238,17 +243,22 @@ export const TRANSLATIONS = {
           date: "2025 - Present",
           bullets: [
             {
-              label: "Technological Training (320 hours)",
-              value: "Client-side and server-side development, working with databases and system architecture."
+              label: "Professional Training (320 hours)",
+              value: "Comprehensive Full-Stack training: Client-side and server-side development, database management, modern frameworks, and advanced system architecture principles."
             },
             {
-              label: "Final Project Phase A",
-              value: "Developed 'Math Ninja' – an interactive game based on client-side logic.",
-              link: { url: "https://math-ninja-production.up.railway.app/", text: "View Project" }
+              label: "Project 1 - Math Ninja",
+              value: "Interactive multiplication practice game based on client-side logic.",
+              link: { url: "https://math-ninja-production.up.railway.app/", text: "View Math Ninja Project" }
+            },
+            {
+              label: "Project 2 - Deep Analysis",
+              value: "React-based web application for stock data analysis and visualization, featuring an interactive user interface for data-driven insights.",
+              link: { url: "https://barazaninaor.github.io/deep-analysis/#/", text: "View Deep Analysis Project" }
             },
             {
               label: "Tools & Technologies",
-              value: "Practical knowledge in JavaScript, Node.js, SQL, and version control with Git."
+              value: "JavaScript (ES6+), React, Angular, Node.js, Python, Java, SQL & NoSQL Databases, Firebase, Git."
             }
           ]
         },
