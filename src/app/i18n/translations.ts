@@ -102,7 +102,7 @@ export const TRANSLATIONS = {
               value: "פיתוח צד לקוח וצד שרת, עבודה עם בסיסי נתונים וארכיטקטורת מערכות."
             },
             {
-              label: "פרויקט 1 - Math Ninja",
+              label: "פרויקט 111 - Math Ninja",
               value: "משחק אינטראקטיבי לתרגול לוח הכפל המבוסס על לוגיקת צד-לקוח.",
               link: { url: "https://math-ninja-production.up.railway.app/", text: "לצפייה בפרויקט Math Ninja" }
             },
