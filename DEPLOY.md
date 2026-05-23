@@ -12,5 +12,4 @@ Follow these steps to update your live website after making changes to your code
    npx ng build --base-href "/barazani-naor/"
 
 2. Deploy to GitHub Pages
-   Run this command to push the build to your live site:
    npx angular-cli-ghpages --dir=dist/naor-barazani/browser
