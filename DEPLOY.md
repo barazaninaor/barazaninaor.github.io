@@ -9,7 +9,7 @@ git push origin main
 Follow these steps to update your live website after making changes to your code.
 
 1. Run this command to compile your code:
-   npx ng build --base-href "/barazani-naor/"
+   npx ng build --base-href "/"
 
 2. Deploy to GitHub Pages
    npx angular-cli-ghpages --dir=dist/naor-barazani/browser
