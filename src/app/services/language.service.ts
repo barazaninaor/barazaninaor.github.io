@@ -9,8 +9,8 @@ export class LanguageService {
   // הגדרת נתוני הקבצים כ-Getter כדי שיהיו זמינים בכל האפליקציה
   get cvFiles() {
     return {
-      he: { path: '/נאור_ברזני_CV.pdf', name: 'Naor_Barazani_CV_HE.pdf' },
-      en: { path: '/Naor_Barazani_CV.pdf', name: 'Naor_Barazani_CV_EN.pdf' }
+      he: { path: 'נאור_ברזני_CV.pdf', name: 'Naor_Barazani_CV_HE.pdf' },
+      en: { path: 'Naor_Barazani_CV.pdf', name: 'Naor_Barazani_CV_EN.pdf' }
     };
   }
 
