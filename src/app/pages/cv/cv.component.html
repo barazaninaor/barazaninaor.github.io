@@ -1,180 +1,197 @@
-<div
-  class="page-container"
-  [attr.dir]="langService.lang() === 'he' ? 'rtl' : 'ltr'"
->
-  <div class="fade-in-page">
-    <header class="cv-header">
-      <h1 class="main-page-title">
-        {{ translations.cv[langService.lang()].name }}
-      </h1>
+<div class="cv-page-wrapper">
+  <div class="download-container">
+    <a
+      [href]="langService.currentCvFile.path"
+      [download]="langService.currentCvFile.name"
+      target="_self"
+      class="download-btn"
+    >
+      {{
+        langService.lang() === "he"
+          ? "הורד קורות חיים (PDF)"
+          : "Download CV (PDF)"
+      }}
+    </a>
+  </div>
 
-      <p class="tagline">{{ translations.cv[langService.lang()].tagline }}</p>
+  <div
+    class="page-container"
+    [attr.dir]="langService.lang() === 'he' ? 'rtl' : 'ltr'"
+  >
+    <div class="fade-in-page">
+      <header class="cv-header">
+        <h1 class="main-page-title">
+          {{ translations.cv[langService.lang()].name }}
+        </h1>
 
-      <div class="contact-info">
-        <span>{{ translations.cv[langService.lang()].contact.phone }}</span>
+        <p class="tagline">{{ translations.cv[langService.lang()].tagline }}</p>
 
-        <span class="sep">|</span>
+        <div class="contact-info">
+          <span>{{ translations.cv[langService.lang()].contact.phone }}</span>
 
-        <span>{{ translations.cv[langService.lang()].contact.email }}</span>
+          <span class="sep">|</span>
 
-        <span class="sep">|</span>
+          <span>{{ translations.cv[langService.lang()].contact.email }}</span>
 
-        <strong class="location-text">{{
-          translations.cv[langService.lang()].location
-        }}</strong>
+          <span class="sep">|</span>
 
-        <span class="sep">|</span>
+          <strong class="location-text">{{
+            translations.cv[langService.lang()].location
+          }}</strong>
 
-        <a
-          [href]="translations.cv[langService.lang()].contact.linkedin.url"
-          target="_blank"
-        >
-          {{ translations.cv[langService.lang()].contact.linkedin.text }}
-        </a>
+          <span class="sep">|</span>
 
-        <span class="sep">|</span>
+          <a
+            [href]="translations.cv[langService.lang()].contact.linkedin.url"
+            target="_blank"
+          >
+            {{ translations.cv[langService.lang()].contact.linkedin.text }}
+          </a>
 
-        <a
-          [href]="translations.cv[langService.lang()].contact.github.url"
-          target="_blank"
-        >
-          {{ translations.cv[langService.lang()].contact.github.text }}
-        </a>
-      </div>
-    </header>
+          <span class="sep">|</span>
 
-    <section class="cv-section profile-section">
-      <h2 class="section-title">
-        {{ translations.cv[langService.lang()].profileTitle }}
-      </h2>
-
-      <p class="profile-desc">
-        {{ translations.cv[langService.lang()].profileDesc }}
-      </p>
-    </section>
-
-    <section class="cv-section experience-section">
-      <h2 class="section-title">
-        {{ translations.cv[langService.lang()].expTitle }}
-      </h2>
-
-      @for (
-        job of translations.cv[langService.lang()].experience;
-        track job.title
-      ) {
-        <div class="cv-item">
-          <div class="item-header">
-            <h3 class="item-title">{{ job.title }}</h3>
-
-            <span class="item-date">{{ job.date }}</span>
-          </div>
-
-          <ul class="bullet-list">
-            @for (bullet of job.bullets; track bullet.value) {
-              <li>
-                @if (bullet.label) {
-                  <strong class="bullet-label">{{ bullet.label }}:</strong>
-                }
-
-                <span class="bullet-value"> {{ bullet.value }}</span>
-
-                @if (bullet.link) {
-                  <a [href]="bullet.link.url" target="_blank" class="cv-link">
-                    ({{ bullet.link.text }})
-                  </a>
-                }
-              </li>
-            }
-          </ul>
+          <a
+            [href]="translations.cv[langService.lang()].contact.github.url"
+            target="_blank"
+          >
+            {{ translations.cv[langService.lang()].contact.github.text }}
+          </a>
         </div>
-      }
-    </section>
+      </header>
 
-    <section class="cv-section education-section">
-      <h2 class="section-title">
-        {{ translations.cv[langService.lang()].eduTitle }}
-      </h2>
+      <section class="cv-section profile-section">
+        <h2 class="section-title">
+          {{ translations.cv[langService.lang()].profileTitle }}
+        </h2>
 
-      @for (
-        edu of translations.cv[langService.lang()].education;
-        track edu.title
-      ) {
-        <div class="cv-item">
-          <div class="item-header">
-            <h3 class="item-title">{{ edu.title }}</h3>
+        <p class="profile-desc">
+          {{ translations.cv[langService.lang()].profileDesc }}
+        </p>
+      </section>
 
-            <span class="item-date">{{ edu.date }}</span>
-          </div>
+      <section class="cv-section experience-section">
+        <h2 class="section-title">
+          {{ translations.cv[langService.lang()].expTitle }}
+        </h2>
 
-          <ul class="bullet-list">
-            @for (bullet of edu.bullets; track bullet.value) {
-              <li>
-                @if (bullet.label) {
-                  <strong class="bullet-label">{{ bullet.label }}:</strong>
-                }
-
-                <span class="bullet-value"> {{ bullet.value }}</span>
-
-                @if (bullet.link) {
-                  <a [href]="bullet.link.url" target="_blank" class="cv-link">
-                    ({{ bullet.link.text }})
-                  </a>
-                }
-              </li>
-            }
-          </ul>
-        </div>
-      }
-    </section>
-
-    <section class="cv-section military-section">
-      <h2 class="section-title">
-        {{ translations.cv[langService.lang()].milTitle }}
-      </h2>
-
-      @for (
-        mil of translations.cv[langService.lang()].military;
-        track mil.title
-      ) {
-        <div class="cv-item">
-          <div class="item-header">
-            <h3 class="item-title">{{ mil.title }}</h3>
-
-            <span class="item-date">{{ mil.date }}</span>
-          </div>
-
-          <ul class="bullet-list">
-            @for (bullet of mil.bullets; track bullet.value) {
-              <li>
-                @if (bullet.label) {
-                  <strong class="bullet-label">{{ bullet.label }}:</strong>
-                }
-
-                <span class="bullet-value"> {{ bullet.value }}</span>
-              </li>
-            }
-          </ul>
-        </div>
-      }
-    </section>
-
-    <section class="cv-section skills-section">
-      <h2 class="section-title">
-        {{ translations.cv[langService.lang()].skillsTitle }}
-      </h2>
-
-      <div class="skills-grid">
         @for (
-          skill of translations.cv[langService.lang()].skills;
-          track skill.label
+          job of translations.cv[langService.lang()].experience;
+          track job.title
         ) {
-          <div class="skill-card">
-            <strong class="skill-label">{{ skill.label }}</strong>
+          <div class="cv-item">
+            <div class="item-header">
+              <h3 class="item-title">{{ job.title }}</h3>
 
-            <p class="skill-value">{{ skill.value }}</p>
+              <span class="item-date">{{ job.date }}</span>
+            </div>
+
+            <ul class="bullet-list">
+              @for (bullet of job.bullets; track bullet.value) {
+                <li>
+                  @if (bullet.label) {
+                    <strong class="bullet-label">{{ bullet.label }}:</strong>
+                  }
+
+                  <span class="bullet-value"> {{ bullet.value }}</span>
+
+                  @if (bullet.link) {
+                    <a [href]="bullet.link.url" target="_blank" class="cv-link">
+                      ({{ bullet.link.text }})
+                    </a>
+                  }
+                </li>
+              }
+            </ul>
           </div>
         }
-      </div>
-    </section>
+      </section>
+
+      <section class="cv-section education-section">
+        <h2 class="section-title">
+          {{ translations.cv[langService.lang()].eduTitle }}
+        </h2>
+
+        @for (
+          edu of translations.cv[langService.lang()].education;
+          track edu.title
+        ) {
+          <div class="cv-item">
+            <div class="item-header">
+              <h3 class="item-title">{{ edu.title }}</h3>
+
+              <span class="item-date">{{ edu.date }}</span>
+            </div>
+
+            <ul class="bullet-list">
+              @for (bullet of edu.bullets; track bullet.value) {
+                <li>
+                  @if (bullet.label) {
+                    <strong class="bullet-label">{{ bullet.label }}:</strong>
+                  }
+
+                  <span class="bullet-value"> {{ bullet.value }}</span>
+
+                  @if (bullet.link) {
+                    <a [href]="bullet.link.url" target="_blank" class="cv-link">
+                      ({{ bullet.link.text }})
+                    </a>
+                  }
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      </section>
+
+      <section class="cv-section military-section">
+        <h2 class="section-title">
+          {{ translations.cv[langService.lang()].milTitle }}
+        </h2>
+
+        @for (
+          mil of translations.cv[langService.lang()].military;
+          track mil.title
+        ) {
+          <div class="cv-item">
+            <div class="item-header">
+              <h3 class="item-title">{{ mil.title }}</h3>
+
+              <span class="item-date">{{ mil.date }}</span>
+            </div>
+
+            <ul class="bullet-list">
+              @for (bullet of mil.bullets; track bullet.value) {
+                <li>
+                  @if (bullet.label) {
+                    <strong class="bullet-label">{{ bullet.label }}:</strong>
+                  }
+
+                  <span class="bullet-value"> {{ bullet.value }}</span>
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      </section>
+
+      <section class="cv-section skills-section">
+        <h2 class="section-title">
+          {{ translations.cv[langService.lang()].skillsTitle }}
+        </h2>
+
+        <div class="skills-grid">
+          @for (
+            skill of translations.cv[langService.lang()].skills;
+            track skill.label
+          ) {
+            <div class="skill-card">
+              <strong class="skill-label">{{ skill.label }}</strong>
+
+              <p class="skill-value">{{ skill.value }}</p>
+            </div>
+          }
+        </div>
+      </section>
+    </div>
   </div>
 </div>

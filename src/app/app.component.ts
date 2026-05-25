@@ -13,4 +13,18 @@ import { LanguageService } from './services/language.service';
 export class AppComponent {
   langService = inject(LanguageService);
   title = 'naor-barazani';
+
+
+  getDownloadLink(): string {
+    return this.langService.lang() === 'he' 
+      ? 'assets/נאור_ברזני_CV.pdf' 
+      : 'assets/Naor_Barazani_CV.pdf';
+  }
+
+  
+  getFileName(): string {
+    return this.langService.lang() === 'he' 
+      ? 'Naor_Barazani_CV_HE.pdf' 
+      : 'Naor_Barazani_CV_EN.pdf';
+  }
 }
