@@ -112,6 +112,11 @@ export const TRANSLATIONS = {
               link: { url: "https://barazaninaor.github.io/deep-analysis/#/", text: "לצפייה בפרויקט Deep Analysis" }
             },
             {
+              "label": "פרויקט 3 - S&P 500 Tracker",
+              "value": "מערכת Full-Stack לניטור נתוני שוק ההון בזמן אמת. פיתוח צד-לקוח ב-Angular וצד-שרת ב-Python (מבוסס API של Yahoo Finance), עם בסיס נתונים MongoDB, בפריסה על פלטפורמת Render.",
+              "link": { "url": "https://barazaninaor.github.io/sp500", "text": "לצפייה בפרויקט S&P 500 Tracker" }
+            },
+            {
               label: "כלים וטכנולוגיות",
               value: "JavaScript, React, Angular, Node.js, Python, Java, SQL & NoSQL Databases, Firebase, Git."
             }
@@ -255,6 +260,11 @@ export const TRANSLATIONS = {
               label: "Project 2 - Deep Analysis",
               value: "React-based web application for stock data analysis and visualization, featuring an interactive user interface for data-driven insights.",
               link: { url: "https://barazaninaor.github.io/deep-analysis/#/", text: "View Deep Analysis Project" }
+            },
+            {
+              "label": "Project 3 - S&P 500 Tracker",
+              "value": "Full-Stack platform for real-time market data monitoring. Developed with an Angular frontend and a Python backend (integrated with Yahoo Finance API), utilizing a MongoDB database and fully deployed on the Render cloud platform.",
+              "link": { "url": "https://barazaninaor.github.io/sp500", "text": "View S&P 500 Tracker project" }
             },
             {
               label: "Tools & Technologies",
