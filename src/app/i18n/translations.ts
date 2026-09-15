@@ -395,34 +395,35 @@ export const TRANSLATIONS = {
   },
 
 
-  coverLetter: {
+
+
+  CoverLetter: {
     he: {
       pageTitle: "Naor Barazani | Cover Letter",
-      mainTitle: "המסלול שלי לעולם הפיתוח",
-      greeting: "הסיפור שמאחורי הקוד: הטמעת חשיבה פילוסופית בטכנולוגיה",
+      mainTitle: "המסלול שלי לעולם הפיתוח והאנליזה",
+      greeting: "הסיפור שמאחורי הקוד: חיבור בין פיננסים, פילוסופיה וטכנולוגיה",
       paragraphs: [
-        "המעבר שלי לעולם הפיתוח אינו רק שינוי בקריירה, אלא התפתחות טבעית של הדרך שבה אני תופס פתרון בעיות. המסלול המקצועי שלי התחיל בעולמות הפיננסים והפילוסופיה – תחומים שלכאורה רחוקים מעולם הקוד, אך בפועל הם אלו שעיצבו את ה-Mindset שלי כמפתח.",
-        "במהלך שני תארים בפילוסופיה, התמחיתי בניתוח לוגי של מערכות מופשטות ומבנים מורכבים. המיומנות הזו היא בדיוק מה שאני מיישם כיום בבניית ארכיטקטורת תוכנה ובהתמודדות עם בעיות אלגוריתמיות. עבורי, כתיבת קוד היא המשך ישיר של הלוגיקה הפורמלית – היכולת לקחת בעיה רחבה ולפרק אותה לרכיבים מדויקים ויעילים.",
-        "בתפקידי כאנליסט פיננסי, זיהיתי את הכוח של הטכנולוגיה ככלי לשינוי ממשי. כאשר בניתי כלי אוטומציה מבוססי Excel המעבדים מאות שורות דאטה עבור כלל הלקוחות, הצלחתי לקצר 50% מזמן העבודה החודשי של הצוות. ההצלחה הזו, לצד פיתוח מחשבונים ייעודיים בסביבת Web עבור החישובים הנפוצים בצוות, הבהירו לי שהתשוקה האמיתית שלי היא בניית הכלים שמנתחים את הנתונים ומנגישים אותם בצורה חכמה. הרגע שבו הקוד הפך לפתרון עסקי שמשפיע על היעילות היומיומית היה הנקודה שבה החלטתי להקדיש את כולי לפיתוח Full-Stack.",
-        "כיום, כסטודנט בטכניון, אני מתמקד בבניית מוצרים תוך דגש על קוד נקי, רספונסיביות וחווית משתמש גבוהה. אני מאמין בגישת AI-Native – שימוש מושכל ומתקדם בכלי בינה מלאכותית כדי לייעל את תהליכי הפיתוח ולבנות מוצרים חכמים ומהירים יותר.",
-        "אני מחפש את האתגר הבא שלי בצוות פיתוח ששואף למצוינות טכנולוגית, שבו אוכל לשלב את היכולות האנליטיות שלי יחד עם הידע המעשי ב-JavaScript, Node.js ו-SQL כדי ליצור אימפקט אמיתי."
+        "המסע המקצועי שלי נבנה על חיבור ייחודי בין עולם הפיננסים והאנליזה לבין עולם פיתוח התוכנה, כשברקע תשתית מחשבתית מעמיקה מעולם הפילוסופיה.",
+        "לאורך הדרך כאחראי תפעול השקעות ואנליסט פיננסי, ראיתי מקרוב את האתגרים היומיומיים בארגונים וזיהיתי את הכוח העצום של טכנולוגיה ככלי לשינוי אמיתי. כאשר בניתי אוטומציות מבוססות אקסל וכלים ייעודיים לייעול תהליכי עבודה ודיוק הנתונים, הבנתי שהתשוקה האמיתית שלי היא לא רק לנתח נתונים, אלא לבנות את הכלים שמנגישים אותם בצורה חכמה ויעילה.",
+        "המעבר לעולם הפיתוח לא היה פרידה מהעבר, אלא התפתחות טבעית: הרקע שלי בפילוסופיה הקנה לי חשיבה לוגית, יכולת ניתוח של מערכות מורכבות ופירוק בעיות רחבות לרכיבים מדויקים – מיומנויות שאני מיישם היום יום-יום בבניית ארכיטקטורה תוכנתית ופתרון בעיות אלגוריתמיות.",
+        "כסטודנט בטכניון למדתי לבנות מוצרים ברמה הגבוהה ביותר, תוך דגש על קוד נקי, סקלביליות וחווית משתמש, לצד אימוץ גישת AI-Native לייעול תהליכי הפיתוח. הפרויקטים שבניתי (כמו מערכת מסחר אלגוריתמי וכלים לניתוח פיננסי מתקדם) משקפים בדיוק את התפיסה שלי: שילוב של חשיבה אנליטית-עסקית עם יכולות טכנולוגיות חזקות כדי לייצר אימפקט אמיתי בשטח.",
+        "אני מחפש את האתגר הבא שלי בצוות מוביל, שבו אוכל לשלב את היכולות האנליטיות וההבנה הפיננסית שלי יחד עם סטטוס קוו טכנולוגי גבוה (ב-JavaScript, Python, React, SQL ועוד) כדי ליצור פתרונות חכמים, יעילים ובעלי ערך עסקי מוכח."
       ],
       closing: "בברכה,",
       signature: "נאור ברזני"
     },
     en: {
       pageTitle: "Naor Barazani | Cover Letter",
-      mainTitle: "My Journey into Software Development",
-      greeting: "The Story Behind the Code: Embedding Philosophical Thinking into Technology",
+      mainTitle: "My Journey into Software Development & Analytics",
+      greeting: "The Story Behind the Code: Bridging Finance, Philosophy, and Technology",
       paragraphs: [
-        "My transition into software development is more than a career change; it is a natural evolution of how I approach problem-solving. My professional path began in the worlds of Finance and Philosophy—fields that may seem distant from coding, but in practice, they are what shaped my mindset as a developer.",
-        "During my two degrees in Philosophy, I specialized in the logical analysis of abstract systems and complex structures. This exact skill set is what I apply today when building software architecture and tackling algorithmic challenges. For me, writing code is a direct extension of formal logic—the ability to take a broad problem and deconstruct it into precise, efficient components.",
-        "In my role as a Financial Analyst, I recognized the power of technology as a tool for real change. When I built Excel-based automation tools that processed vast amounts of data for our entire client base, I managed to reduce the team's monthly workload by 50%. This success, along with developing dedicated web-based calculators for complex financial maneuvers, made it clear that my true passion lies in building the tools that analyze data and make it accessible and intelligent.",
-        "Currently, as a student at the Technion Continuing Education, I am focused on building products with an emphasis on clean code, responsiveness, and high-quality user experience. I believe in an AI-Native approach—leveraging advanced artificial intelligence tools to streamline development processes and build smarter, faster products.",
-        "I am looking for my next challenge within a development team that strives for technical excellence, where I can integrate my analytical capabilities with my practical knowledge of JavaScript, Node.js, and SQL to create a real impact."
+        "My professional journey is built on a unique combination of the worlds of finance and analytics alongside software development, underpinned by a deep intellectual foundation in philosophy.",
+        "Along the way as an investment operations manager and financial analyst, I saw firsthand the daily challenges in organizations and recognized the immense power of technology as a tool for real change. When I built Excel-based automations and dedicated tools to streamline workflows and ensure data accuracy, I realized that my true passion is not just analyzing data, but building the tools that present it in a smart and efficient way.",
+        "Moving into the world of development was not a departure from the past, but a natural evolution: my background in philosophy provided me with logical thinking, the ability to analyze complex systems, and the skill to break down broad problems into precise components—abilities that I apply day-to-day in building software architecture and solving algorithmic problems.",
+        "As a student at the Technion, I learned to build top-tier products with an emphasis on clean code, scalability, and high user experience, alongside adopting an AI-Native approach to streamline development processes. The projects I built (such as an algorithmic trading system and advanced financial analysis tools) precisely reflect my perspective: a blend of analytical-business thinking with strong technological capabilities to generate real impact in the field.",
+        "I am looking for my next challenge in a leading team where I can combine my analytical skills and financial acumen with a high technological standard (in JavaScript, Python, React, SQL, and more) to create smart, efficient solutions with proven business value."
       ],
       closing: "Best Regards,",
       signature: "Naor Barazani"
     }
-  }
-};
+}
